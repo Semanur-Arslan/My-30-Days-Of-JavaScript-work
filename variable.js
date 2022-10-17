@@ -63,7 +63,7 @@ console.log(firstName, lastName, maritalStatus, country, age)
      age = 23
 */
 
-const myAge = 'I am 25 years old.'
-const yourAge = 'You are 30 years old.'
+const MY_AGE = 'I am 25 years old.'
+const YOUR_AGE = 'You are 30 years old.'
 
-console.log(myAge, yourAge)
+console.log(MY_AGE, YOUR_AGE)
