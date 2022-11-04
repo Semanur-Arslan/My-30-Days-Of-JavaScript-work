@@ -1,4 +1,4 @@
-// Exerzise 4
+// Exercise 4
 
 //LEVEL 1
 
