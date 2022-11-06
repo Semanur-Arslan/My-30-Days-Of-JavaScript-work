@@ -204,4 +204,92 @@ let arrayNew1= []
  console.log(arrayNew1)
  // çıktı -> (11) [7, 7, 6, 7, 8, 7, 7, 7, 7, 5, 5]
 
- // exercise6
+ // exercise7 ( 'land' içeren elemanları yeni diziye aktardık)
+let newArray2 = []
+for(let c = 0; c<countries.length; c++){
+    if(countries[c].includes('land')){
+        newArray2.push(countries[c]) 
+    }
+}
+console.log(newArray2) // çıktı -> (2) ['Finland', 'Ireland']
+
+ // exercise8 ( sonu 'ia' ile biten elemanları yeni diziye yazdırma)
+let newArray3 = []
+for(let d = 0; d<countries.length; d++){
+    if(countries[d].endsWith('ia'))
+    newArray3.push(countries[d])
+}
+console.log(newArray3)// çıktı -> (3) ['Albania', 'Bolivia', 'Ethiopia']
+
+
+// exercise9 ( karakter uzunluğu en uzun ülkeyi yazdır) ????????
+let newArray5 = []
+let newArray6 = []
+let enUzun = 0
+for(let d = 0; d<countries.length; d++){
+    newArray5.push(countries[d].length)
+   newArray5.sort()
+   enUzun = newArray5[10]
+}
+// il for döngüsünde ülkelerin uzunluklarını diziye yazdırdık, diziyi sort ile sıraladık ve son elemanı aldık
+// bu şekilde en uzun elemanın uzunluğunu biliyoruz. bunu enUzun olarak tanımladık
+
+for(let d = 0; d<countries.length; d++){
+  if(enUzun == countries[d].length){
+    newArray6.push(countries[d])
+ }
+}
+// ikinci for döngüsünde ise istediğimiz uzunluk ile aynı olan ülkenin yazdırılmasını sağladık
+console.log(newArray6)// çıktı -> ['Ethiopia']
+
+
+
+
+
+// exercise10 (karakter uzunluğu 5 olan üklerei yeni bir diziye yazdırdık)
+let newArray4 = []
+for(let d = 0; d<countries.length; d++){
+    if(countries[d].length == 5){
+        newArray4.push(countries[d])
+    }
+}
+console.log(newArray4) // çıktı ->(2) ['Japan', 'Kenya']
+
+// exercise11 (en uzun kelimeyi bulma) ????
+
+
+
+//exercise12 
+const webTechs = [
+    'HTML',
+    'CSS',
+    'JavaScript',
+    'React',
+    'Redux',
+    'Node',
+    'MongoDB'
+  ]
+
+ dizi1 = 0
+ dizi2 = []
+  for(t = 0; t<webTechs.length; t++){
+    dizi1 = [`${webTechs[t]}, ${webTechs[t].length}`]
+    dizi2.push(dizi1)
+  }
+  console.log(dizi2) 
+  /* çıktı-> 
+  (7) [Array(1), Array(1), Array(1), Array(1), Array(1), Array(1), Array(1)]
+['HTML, 4']
+['CSS, 3']
+['JavaScript, 10'] 
+['React, 5']
+['Redux, 5'] 
+['Node, 4'] 
+['MongoDB, 7']
+*/
+
+
+
+
+
+  
