@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/FORM/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h2 style="text-align: center; margin-top: 130px;">Vücut Kitle İndeksi Hesapla</h2>
+            <div class="col-sm-4">
+
+<!-- form gönderirken iki method kullanılabilir GET veya POST -->
+<!-- GET Methodu form verilerini url üzerinden gönderir.
+UYARI: Get metodu önemsiz verilerde kullanılmalıdır, kullanıcı adı, şifre gibi bilgilerin bu method ile gönderilmesi uygun değildir. -->
+<!-- post ise verileri daha güvenli gönderir ve sayfanın arka planında saklar-->
+
+<!-- bu çalışmayı GET ile yapıcaz fakat formu gönderdiğimizde url üzerinde yazmamasını istiyorsak ne yapmalıyız???? ve hesapla(submit) butonuna bastığımızda sayfa yenilenmesin istiyoruz ??? -->
+
+<!-- javascriptede event.preventDefault()  ile bunu sağlayabiliriz -->
+
+
+
+    
+            </div>
+            <div class="col-sm-6">
+                <form id="firstForm" class=" mt-5" method="get" action="">
+                    <label for="kg" > Kilonuzu Giriniz</label>
+                    <br>
+                    <input type="number" name="kg" id="kg" placeholder="00 ">
+                    <br>
+                    <label for="boy" >Boyunuzu Giriniz</label>
+                    <br>
+                    <input type="number" step="0.01" name="boy" id="boy" placeholder="0.00">
+                    <br>
+                    <br>
+                    <button type="reset" class="btn btn-danger">Sil</button>
+                    <button type="submit" class="btn btn-secondary">Hesapla</button>
+                    <br>
+                    <br>
+                    <h5 id="sonuç">0</h5>
+                    <br>
+                    <h6 id="kategori"></h6>
+                </form>
+    
+            </div>
+            <div class="col-sm-6">
+    
+            </div>
+        
+        </div>
+    </div>
+
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<script src="/FORM/form.js"></script>
+</body>
+</html>

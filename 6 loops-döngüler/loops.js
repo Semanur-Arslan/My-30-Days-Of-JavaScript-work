@@ -289,7 +289,102 @@ const webTechs = [
 */
 
 
+// while döngüsü ise ... olana kadar demektir.
+// mesela bir kullanıcının isim bilgisini alana kadar yapacağı işlemi söyleyebiliriz. 
+// kullanıcı isminin girene kadar name imputu tekrar tekrar karşısına çıkabilir
+let username = ''
+while(!username){
+    username = prompt ('kullanıcı adını giriniz')
+    console.log(username);
+}
 
 
 
+//ForEach ile Array içerisindeki Öğelerin Çağrılması
+
+/* forEach , döngü oluşturmamızı ve bu döngüyü sırayla çalıştırmamızı sağlayan bir array metodudur.
+array elemanlarına ulaşabilir ve değişiklik yapabiliriz.
+
+forEach fonksiyonu item, index, array olmak üzere 3 parametre alabilir. */
+
+/*arr.forEach(function(value, index, array) {
+    işlem yazılır
+  }
+*/
   
+
+const numbers = [4, 11, 9];
+const newArray1 = [];
+
+numbers.forEach(function(numbers){
+  newArray1.push(numbers*3);
+});
+console.log(newArray1);
+
+// çıktı = [12, 33, 27]
+// burada dizideki her elemanı 3 ile çarparak yeni dizi oluşturulmuştur.
+
+// ÖRNEK - Numbers1 array'ini kullanarak her elemanının iki fazlasına sahip olan başka bir array oluşturunuz.
+
+ const numbers1 = [12, 24, 36]; 
+ const plusTwo = [];
+
+ numbers1.forEach((numbers1) => {
+     plusTwo.push(numbers1 + 2)
+ })
+console.log(plusTwo)
+
+
+
+//  filter() methodu
+//filter(), dizi elemanlarını döngüye alıp, istediğimiz koşula sahip olanlarla yeni bir dizi oluşturmak için kullanılır.
+
+const users = [
+	{fullName: "Mehmet Veli", isActive: false},
+	{fullName: "Ali Duran", isActive: true},
+    {fullName: "Ahmet Yılmaz", isActive: true},
+    {fullName: "Oğuz Şahin", isActive: false},
+]
+//Yukardaki users dizisindeki nesneler içerisinden isActive'i true olanları almak istiyorum.
+
+const activeUsers = users.filter(user => user.isActive === true);
+console.log(activeUsers); 
+
+
+const person = [{
+    name: "Adem",
+    age: 25,
+    languages: ["JavaScript", "CSS"],
+  },
+  {
+    name: "Oğuz",
+    age: 33,
+    languages: ["Java", "HTML"],
+    }
+  ];
+  //Soru 1: Yukarıdaki diziyi kullanarak filter() metodu ile yaşı 30'dan büyük olan kişiyi getirin.
+  
+  const oldPerson = person.filter(person => (person.age > 30 ));
+
+  console.log(oldPerson) // çıktı ->[{…}]  {name: 'Oğuz', age: 33, languages: Array(2)}
+  
+  //Soru 2: Yukarıdaki diziyi kullanarak filter() metodu ile JavaScript bilen kişiyi getirin.
+   const know = person.filter(person => person.languages.includes('JavaScript'));
+   console.log(know)  //[{…}] {name: 'Adem', age: 25, languages: Array(2)}
+   
+
+//Map ile Array İçerisideki Yapının Değiştirilerek Yeni Liste Oluşturulması
+
+// Array Map metodu, parametre ile kendisine gönderilen dizinin her bir elemanı için ayrı ayrı çalışır ve belirlenen işleme tabi tutup, yeni bir dizi meydana getirir.
+
+// forEach metodundan farklı bizim tekrar bir diziye ekleme işlemi yapmamıza gerek kalmamasıdır. çünkü kendisi yeni bir dizi oluşturur.
+  
+const num = [4, 11, 9];
+
+
+const newA = num.map(item => {
+    return item * 3
+})
+console.log(newA)
+
+
